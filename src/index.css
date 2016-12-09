@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+body {
+  background: #FAFAFA;
+  color: #4A4A4A;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+form {
+  align-items: flex-end;
+  background: #FFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 10px;
+  width: 100%;
+}
+form textarea {
+  background: #EFEFEF;
+  border: none;
+  border-bottom: 2px solid #CCC;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 100px;
+  padding: 10px;
+  transition: all 0.2s;
+  width: 100%;
+}
+form textarea:hover {
+  border-bottom: 2px solid #AAA;
+}
+form textarea:focus {
+  border-bottom: 2px solid #777;
+}
+form input[type=submit] {
+  background: #4990E2;
+  border: none;
+  border-bottom: 2px solid #4A82E2;
+  color: #EEEEEE;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 44px;
+  margin-top: 10px;
+  transition: all 0.2s;
+  width: 120px;
+}
+form input[type=submit]:hover {
+  border-bottom: 2px solid #2E5B90;
+}
+.error {
+  color: #B10015;
+  margin: 0 auto 10px;
+}
+.three-bounce > div {
+  background-color: #9B9B9B;
+}
+.AnswerForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.AnswerForm-info {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+.AnswerForm-info p {
+  color: #AAA;
+  font-weight: 700;
+  text-align: center;
+}
+.AnswerList {
+  max-width: 600px;
+  width: 100%;
+}
+.AnswerListItem {
+  list-style-type: none;
+  background: #FFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+.AnswerListItem-text {
+  padding: 10px;
+  color: #4A4A4A;
+}
+.AnswerListItem-user {
+  align-items: center;
+  background: #F5F5F5;
+  display: flex;
+  padding: 3px;
+}
+.AnswerListItem-user img {
+  border-radius: 50%;
+  height: 38px;
+  margin-right: 6px;
+  vertical-align: middle;
+  width: 38px;
+}
+.AnswerListItem-user h2 {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 400;
+}
+.AnswerListItem-user p {
+  color: #ACACAC;
+  font-size: 12px;
+  font-weight: 300;
+}
+.AnswerRemove,
+.QuestionRemove {
+  border-top: 1px solid #D8D8D8;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  width: 100%;
+}
+.AnswerRemove button,
+.QuestionRemove button {
+  background: none;
+  border: none;
+  color: #B10015;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.2s;
+}
+.AnswerRemove button:hover,
+.QuestionRemove button:hover {
+  color: #D0011B;
+}
+.App {
+  height: 100vh;
+}
+.App-body {
+  background: #FFF;
+  padding-top: 52px;
+  height: 100%;
+}
+.AnswerList-empty,
+.Home,
+.MyQuestions,
+.Question-empty {
+  color: #CCC;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  margin: 30px;
+}
+.Navbar {
+  align-items: center;
+  background: #FFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding-left: 10px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 52px;
+}
+.Navbar a {
+  color: #9B9B9B;
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 15px;
+  transition: all 0.2s;
+}
+.Navbar a:hover {
+  color: #777;
+}
+.Navbar-auth button {
+  align-items: center;
+  background: none;
+  border: none;
+  border-left: 1px solid #D8D8D8;
+  color: #9B9B9B;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 52px;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.2s;
+}
+.Navbar-auth button:hover {
+  color: #777;
+}
+.Navbar-auth button div {
+  align-items: center;
+  display: flex;
+}
+.Navbar-auth button img {
+  border-radius: 50%;
+  height: 33px;
+  margin-left: 6px;
+  width: 33px;
+}
+.Navbar-home {
+  flex: 1;
+}
+.NewQuestion {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.Question {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.Question-container {
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+.Question-container img {
+  border-radius: 50%;
+  display: block;
+  height: 80px;
+  margin: 10px;
+  width: 80px;
+}
+.Question-container p {
+  color: #4A4A4A;
+  font-size: 16px;
+  padding: 10px;
+}
+.Question-container span {
+  border-bottom: 1px solid #D8D8D8;
+  color: #9B9B9B;
+  display: block;
+  font-size: 14px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+.QuestionList {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.QuestionListItem {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.QuestionListItem a {
+  display: block;
+  background: #FFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+.QuestionListItem a:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+.QuestionListItem-answers {
+  align-items: center;
+  background: #FAFAFA;
+  display: flex;
+  justify-content: flex-end;
+  padding: 3px;
+  padding-right: 10px;
+}
+.QuestionListItem-answers p {
+  color: #9B9B9B;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 3px;
+}
+.QuestionListItem-answers span {
+  background: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 2px solid #D0D0D0;
+  color: #4A4A4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.QuestionListItem-text {
+  padding: 10px;
+  color: #4A4A4A;
+}
+.QuestionListItem-user {
+  align-items: center;
+  background: #F5F5F5;
+  display: flex;
+  padding: 3px;
+}
+.QuestionListItem-user img {
+  border-radius: 50%;
+  height: 38px;
+  margin-right: 6px;
+  vertical-align: middle;
+  width: 38px;
+}
+.QuestionListItem-user h2 {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 400;
+}
+.QuestionListItem-user p {
+  color: #ACACAC;
+  font-size: 12px;
+  font-weight: 300;
+}

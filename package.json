@@ -1,0 +1,53 @@
+{
+  "name": "quick-questions-firebase-react-mobx",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "firebase": "^3.6.1",
+    "lodash": "^4.17.2",
+    "mobx": "^2.6.4",
+    "mobx-react": "^4.0.3",
+    "mobx-react-devtools": "^4.2.10",
+    "moment": "^2.17.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
+    "react-spinkit": "^1.1.11"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/forbid-prop-types": 0
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
+  }
+}
